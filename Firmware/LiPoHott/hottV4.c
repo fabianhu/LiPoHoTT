@@ -4,6 +4,12 @@
  * Created: 06.09.2012 23:14:14
  * split the original arduino .pde to .c and .h
  * see header file for original license
+ 
+ Timing stuff:
+ Measured from GAM / Voltage Module:
+ wait 6.5 ms before starting to answer;
+ leave 2 ms between bytes on answer.
+ 
  */ 
 
 
@@ -22,14 +28,13 @@
 
 extern data_t myData;
 extern par_t myPar;
-extern uint32_t timer_us;
 
 static uint8_t _hott_telemetry_is_sending = false;
 //static uint8_t _hott_telemetry_sendig_msgs_id = 0;
 
 //HoTT serial buffer
 #ifdef HOTT_SIM_TEXTMODE
-static uint8_t _hott_serial_buffer_textmode[172]; // fixme maybe there has to be one more for the tailing 0.
+static uint8_t _hott_serial_buffer_textmode[172+1]; // there has to be one more for the tailing 0.
 #endif
 static uint8_t _hott_serial_buffer[44];
 
@@ -82,7 +87,8 @@ void _hott_serial_scheduler(uint32_t tnow) {
       return;
   } else {
   	//new data request
-  	tnow = timer_us; //correct the 5ms  delay in _hott_check_serial_data()...
+  	tnow = GetTime(); //correct the 5ms  delay in _hott_check_serial_data()...
+ 
   }
   _hott_send_telemetry_data();
   _hott_serial_timer = tnow;
@@ -144,7 +150,7 @@ void _hott_check_serial_data(uint32_t tnow) {
         	_hott_serial_request_timer = tnow;	//save timestamp
         	return;
         } else {
-        	if(tnow - _hott_serial_request_timer < 5000)	//wait ca. 5ms
+        	if(tnow - _hott_serial_request_timer < 6500)	//wait ca. 5ms (Voltage module waits 6.5m)
         		return;
         	_hott_serial_request_timer = 0;	//clean timer
         }
@@ -167,7 +173,8 @@ void _hott_check_serial_data(uint32_t tnow) {
              	HOTT_TEXTMODE_MSG_t	*hott_txt_msg =	(HOTT_TEXTMODE_MSG_t *)&_hott_serial_buffer_textmode[0];
 				memset(hott_txt_msg, ' ', sizeof(HOTT_TEXTMODE_MSG_t));
 				hott_txt_msg->start_uint8_t = 0x7b;
-				hott_txt_msg->fill1 = 0xe0; // fixme switch to 0xEF on ESC or any key ?????? check!!!
+				hott_txt_msg->stop_uint8_t = 0x7d;
+				hott_txt_msg->fill1 = 0xD0; 
 				hott_txt_msg->warning_beeps = 0; // just prevent beeping
                 
 				//hott_txt_msg = HOTT_Clear_Text_Screen(hott_txt_msg);
@@ -231,7 +238,7 @@ void _hott_check_serial_data(uint32_t tnow) {
 //            Serial.printf("\n%ld: REQ_GAM",micros() / 1000);
 			  _hott_update_gam_msg();
 		      _hott_send_msg(_hott_serial_buffer, sizeof(struct HOTT_GAM_MSG));
-			  lastComm = timer_us;
+			  lastComm = GetTime();
 			  PORTD ^= (1<<PD5); // toggle LED
               break;
 		    }
@@ -303,9 +310,8 @@ void _hott_update_gam_msg() {
 	hott_gam_msg->alarm_invers1 = (beep>0)?0x07:0; // bit 0: all cells invers
 	hott_gam_msg->alarm_invers2 = (beep>0)?0x03:0;
 	
-	cli();	
-	uint32_t localTime = timer_us;	
-	sei();
+	uint32_t localTime = GetTime();	
+
 	if(beep != old_beep)
 	{
 		old_time = localTime;
@@ -347,12 +353,10 @@ void _hott_update_gam_msg() {
 	hott_gam_msg->batt_cap_L = c&0x00ff;
 	hott_gam_msg->batt_cap_H = (c&0xff00)>>8;
 	hott_gam_msg->fuel_procent = myData.fill;	// my fuel are electrons :)
-static uint16_t s;
-	s++;
-	hott_gam_msg->rpm_L = s & 0x00ff; // indicate working
-	hott_gam_msg->rpm_H = s >> 8;
-	hott_gam_msg->rpm2_L = 0xff; // indicate working
-	hott_gam_msg->rpm2_H = 0xff;
+	hott_gam_msg->rpm_L = 0; 
+	hott_gam_msg->rpm_H = 0;
+	hott_gam_msg->rpm2_L = 0x0; 
+	hott_gam_msg->rpm2_H = 0x0;
 	hott_gam_msg->speed_L = 0;
 	hott_gam_msg->speed_H = 0;
 	hott_gam_msg->fuel_ml_L = 0;

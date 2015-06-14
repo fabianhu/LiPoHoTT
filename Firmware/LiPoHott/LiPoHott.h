@@ -50,6 +50,7 @@ typedef struct par_tag
 void SafePars(void);
 void Calibrate(void);
 void CalibrateZeroCurrent(void);
+uint32_t GetTime(void); // thread & isr safe time getter
 
 #define MEASCELLCOUNT 3
 

@@ -61,13 +61,13 @@
 #define HOTT_TEXTMODE_MSG_TEXT_LEN 168
 //Text mode msgs type
 typedef struct HOTT_TEXTMODE_MSG_tag {
-	uint8_t start_uint8_t ;	//#01 constant value 0x7b
-	uint8_t fill1;			//#02 constant value 0x00
+	uint8_t start_uint8_t ;	//#01 constant value 0x7b '{'
+	uint8_t fill1;			//#02 constant value 0xD0 (at voltage module)
 	uint8_t warning_beeps;	//#03 1=A 2=B ...
 	uint8_t msg_txt[HOTT_TEXTMODE_MSG_TEXT_LEN];	//#04 ASCII text to display to
 	// Bit 7 = 1 -> Inverse character display
 	// Display 21x8
-	uint8_t stop_uint8_t;		//#171 constant value 0x7d
+	uint8_t stop_uint8_t;		//#171 constant value 0x7d '}'
 	//	uint8_t parity;		//#172 Checksum / parity
 }HOTT_TEXTMODE_MSG_t;
 //static HOTT_TEXTMODE_MSG hott_txt_msg;
@@ -160,8 +160,8 @@ struct HOTT_GAM_MSG {
 	uint8_t general_error_number;	//#41 Voice error == 12. TODO: more docu
 	uint8_t pressure;				//#42 Pressure up to 16bar. 0,1bar scale. 20 = 2bar
 	uint8_t version;				//#43 version number TODO: more info?
-	uint8_t stop_uint8_t;				//#44 stop uint8_t
-	//	uint8_t parity;				//#45 CRC/Parity (calculated dynamicaly)
+	uint8_t stop_uint8_t;				//#44 stop uint8_t (0x7D)
+	//	uint8_t parity;				//#45 CRC/Parity (calculated dynamically and appended in packet)
 };
 
 #endif

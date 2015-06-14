@@ -1,3 +1,4 @@
 *.b#?
 *.s#?
 *.pro
+/Firmware/LiPoHott/Debug

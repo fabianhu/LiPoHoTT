@@ -24,6 +24,24 @@
  - Strom-Messung
  - mAh-Zähler
  
+ Fuses:
+ BOOTSZ = 1024W_0C00
+ BOOTRST = [ ]
+ RSTDISBL = [ ]
+ DWEN = [ ]
+ SPIEN = [X]
+ WDTON = [ ]
+ EESAVE = [ ]
+ BODLEVEL = 4V3
+ CKDIV8 = [X]
+ CKOUT = [ ]
+ SUT_CKSEL = INTRCOSC_8MHZ_6CK_14CK_65MS
+
+ EXTENDED = 0xF9 (valid)
+ HIGH = 0xDC (valid)
+ LOW = 0x62 (valid)
+
+ 
  
   */ 
 
@@ -55,7 +73,7 @@ void timing_init(void);
 
 extern uint32_t lastComm;
 
-uint32_t timer_us;
+static volatile uint32_t GlobalTimer_us; // the global timer, incremented by ISR every 100 us
 
 data_t myData;
 par_t myPar;
@@ -95,7 +113,7 @@ int main(void)
         
 		getADC(); // calls Hott between conversions
 		
-		if (timer_us - lastComm > 1000000)
+		if (GetTime() - lastComm > 1000000)
 		PORTD |= (1<<PD5); // toggle LED
     }
 }
@@ -113,18 +131,23 @@ uint16_t adc_get_filter_channel(uint8_t c) // takes about 6,4ms
 	{
 		a+=a2dConvert10bit(c); // takes 100 us
 		
-		static uint32_t last;
-		if(timer_us - last > 900)
-		{
-			_hott_serial_scheduler(timer_us); // HOTT here, as timing allows it only here.
-			last = timer_us;			
-		}
-
+		uint32_t t = GetTime();
+		_hott_serial_scheduler(t); // HOTT here, as timing allows it only here.
+		
+		
 	}
 	
 	return a;///MEASURES; 
 }
 
+uint32_t GetTime(void)
+{
+	uint32_t t;
+	cli();
+	t= GlobalTimer_us;
+	sei();
+	return t;
+}
 
 
 //! Perform a 10-bit conversion
@@ -203,9 +226,9 @@ void getADC(void)
 	{
 		asm("nop");
 	}
-	cli();
-	uint32_t _now = timer_us/100;
-	sei();
+	
+	uint32_t _now = GetTime()/100;
+	
 	static uint32_t oldCapTime=0;
 	uint32_t CapDiffTime = _now - oldCapTime;
 	oldCapTime = _now;
@@ -343,7 +366,7 @@ void Calibrate(void)
 
 void timing_init(void)
 {
-	timer_us = 0;
+	GlobalTimer_us = 0;
 	
 	TCCR0A = 0;
 //	TCCR0B = 0b00000011; // 125kHz Clock @ 8MHz,
@@ -358,7 +381,7 @@ void timing_init(void)
 ISR(TIMER0_COMPB_vect)
 {
 	TCNT0 =0;  // reset the timer on ISR to have correct timing
-	timer_us+=100;
+	GlobalTimer_us+=100;
 }
 
 
@@ -466,7 +489,7 @@ void HandleHott( unsigned char addr, uint8_t* txtptr )
 	}
 	
 	// text building
-	sprintf(txtptr,       "  LiPoHott V1.1      ");
+	sprintf(txtptr,       "  LiPoHott V1.2      ");
 	hott_invert_chars(txtptr,21);
 	sprintf(&txtptr[1*21],"  Limit Low: %dmV ",myPar.limitL);
 	sprintf(&txtptr[2*21],"  Limit Hi: %dmV ",myPar.limitH);
@@ -476,7 +499,7 @@ void HandleHott( unsigned char addr, uint8_t* txtptr )
 	sprintf(&txtptr[6*21],"  Safe_to_flash ");
 	//sprintf(&txtptr[6*21],"---------------------");
 	//1:1234 2:1234 3:1234
-	sprintf(&txtptr[7*21]," (c) huslik.net 2013 ");
+	sprintf(&txtptr[7*21]," (c) huslik.net 2015 ");
 	hott_invert_chars(&txtptr[7*21],21);
 	//sprintf(&txtptr[7*21],"t:%d",timer_ms);
 	//sprintf(&txtptr[7*21],"1:%d 2:%d 3:%d",myData.UCell[0],myData.UCell[1],myData.UCell[2]);
@@ -494,5 +517,5 @@ void HandleHott( unsigned char addr, uint8_t* txtptr )
 	}
 	
 	PORTD ^= (1<<PD5); // toggle LED
-	lastComm = timer_us;
+	lastComm = GetTime();
 }
