@@ -1,0 +1,102 @@
+
+(rules PCB Akkucheck
+  (snap_angle 
+    fortyfive_degree
+  )
+  (autoroute_settings
+    (fanout off)
+    (autoroute on)
+    (postroute on)
+    (vias on)
+    (via_costs 50)
+    (plane_via_costs 5)
+    (start_ripup_costs 100)
+    (start_pass_no 1)
+    (layer_rule 1#Top
+      (active on)
+      (preferred_direction horizontal)
+      (preferred_direction_trace_costs 1.0)
+      (against_preferred_direction_trace_costs 2.2)
+    )
+    (layer_rule 16#Bottom
+      (active on)
+      (preferred_direction vertical)
+      (preferred_direction_trace_costs 1.0)
+      (against_preferred_direction_trace_costs 1.8)
+    )
+  )
+  (rule
+    (width 0.15)
+    (clear 0.1524)
+    (clear 0.0762 (type smd_to_turn_gap))
+    (clear 0.381 (type default_boundary))
+    (clear 0.381 (type default_area))
+    (clear 0.381 (type boundary_via))
+    (clear 0.381 (type boundary_smd))
+    (clear 0.381 (type boundary_pin))
+    (clear 0.381 (type boundary_area))
+    (clear 0.381 (type via_area))
+  )
+  (padstack Round1$0.330200
+    (shape
+      (circle 1#Top 0.6858 0.0 0.0)
+    )
+    (shape
+      (circle 16#Bottom 0.6858 0.0 0.0)
+    )
+    (attach off)
+  )
+  (padstack Round2$0.330200
+    (shape
+      (circle 1#Top 0.6858 0.0 0.0)
+    )
+    (shape
+      (circle 16#Bottom 0.6858 0.0 0.0)
+    )
+    (attach off)
+  )
+  (via 
+    Round1$0.330200 Round1$0.330200 via
+  )
+  (via 
+    Round2$0.330200 Round2$0.330200 via
+  )
+  (via_rule
+    default Round1$0.330200
+  )
+  (class default
+    0V MISO MOSI N$2 N$6 N$8 N$9 N$10
+    N$15 N$16 N$18 N$19 N$20 N$23 N$24 N$25
+    N$26 N$28 N$33 NRESET SCK VCC
+    (clearance_class default)
+    (via_rule default)
+    (rule
+      (width 0.15)
+    )
+    (circuit 
+      (use_layer 1#Top 16#Bottom)
+    )
+  )
+  (class supp
+    N$1 N$3 N$4 N$5 N$7 N$27
+    (clearance_class default)
+    (via_rule default)
+    (rule
+      (width 0.25)
+    )
+    (circuit 
+      (use_layer 1#Top 16#Bottom)
+    )
+  )
+  (class isol
+    "H_+" "H_-" "H_S" N$11 N$12 N$13 N$22
+    (clearance_class default)
+    (via_rule default)
+    (rule
+      (width 0.15)
+    )
+    (circuit 
+      (use_layer 1#Top 16#Bottom)
+    )
+  )
+)
