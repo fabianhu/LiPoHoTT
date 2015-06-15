@@ -17,7 +17,8 @@
 	You should have received a copy of the GNU General Public License
 	along with this program.  If not, see <http://www.gnu.org/licenses/>.
 
- 
+ ATTENTION:
+ COMPILE WITH WINAVR 20100110
  
  TODO:
  - Kalibrierung checken

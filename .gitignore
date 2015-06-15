@@ -2,3 +2,4 @@
 *.s#?
 *.pro
 /Firmware/LiPoHott/Debug
+/Firmware/LiPoHott/default
