@@ -620,9 +620,9 @@ Please make sure your boards conform to these design rules.</description>
 <element name="R3" library="rcl" package="R0402" value="10k" x="15" y="10" smashed="yes" rot="R270">
 <attribute name="NAME" x="14.666" y="9.042" size="0.6096" layer="25" rot="R270"/>
 <attribute name="VALUE" x="14.4285" y="9.5555" size="0.6096" layer="27" rot="R90"/>
-<attribute name="OC_FARNELL" value="1469748" x="15" y="10" size="1.778" layer="27" rot="R270" display="off"/>
+<attribute name="OC_FARNELL" value="1738864" x="15" y="10" size="1.778" layer="27" rot="R270" display="off"/>
 <attribute name="MF" value="VISHAY DRALORIC" x="15" y="10" size="1.778" layer="27" rot="R270" display="off"/>
-<attribute name="MPN" value="CRCW060310K0FKEA" x="15" y="10" size="1.778" layer="27" rot="R270" display="off"/>
+<attribute name="MPN" value="CRCW040210K0FKEAHP" x="15" y="10" size="1.778" layer="27" rot="R270" display="off"/>
 </element>
 <element name="IC1" library="atmel" package="MLF32" value="MEGA8-MI" x="8.65763125" y="4.269709375" smashed="yes" rot="R90">
 <attribute name="NAME" x="7.70513125" y="3.723609375" size="0.6096" layer="25" rot="R90"/>
@@ -635,10 +635,16 @@ Please make sure your boards conform to these design rules.</description>
 <element name="R12" library="rcl" package="R0402" value="33k" x="3.4075" y="1.5125" smashed="yes" rot="R90">
 <attribute name="NAME" x="2.074" y="2.2745" size="0.6096" layer="25" rot="R270"/>
 <attribute name="VALUE" x="4.5823" y="0.9728" size="0.6096" layer="27" rot="R90"/>
+<attribute name="OC_FARNELL" value="2331513" x="3.4075" y="1.5125" size="1.778" layer="27" rot="R90" display="off"/>
+<attribute name="MF" value="TE CONNECTIVITY" x="3.4075" y="1.5125" size="1.778" layer="27" rot="R90" display="off"/>
+<attribute name="MPN" value="CRG0402F33K" x="3.4075" y="1.5125" size="1.778" layer="27" rot="R90" display="off"/>
 </element>
 <element name="R13" library="rcl" package="R0402" value="8k2" x="1.5875" y="2.0637" smashed="yes">
 <attribute name="NAME" x="2.286" y="0.4127" size="0.6096" layer="25" rot="R180"/>
 <attribute name="VALUE" x="1.9685" y="1.4922" size="0.6096" layer="27" rot="R180"/>
+<attribute name="OC_FARNELL" value="2331571" x="1.5875" y="2.0637" size="1.778" layer="27" display="off"/>
+<attribute name="MF" value="TE CONNECTIVITY" x="1.5875" y="2.0637" size="1.778" layer="27" display="off"/>
+<attribute name="MPN" value="CRG0402F8K2" x="1.5875" y="2.0637" size="1.778" layer="27" display="off"/>
 </element>
 <element name="IN3" library="Fabi" package="3WIRE_CONN" value="" x="18.1025" y="8.7275" smashed="yes" rot="MR270">
 <attribute name="OC_FARNELL" value="unknown" x="18.1025" y="8.7275" size="1.778" layer="28" rot="MR270" display="off"/>
@@ -660,10 +666,16 @@ Please make sure your boards conform to these design rules.</description>
 <element name="R1" library="rcl" package="R0402" value="33k" x="3.4075" y="4.355" smashed="yes" rot="R90">
 <attribute name="NAME" x="2.7725" y="3.72" size="0.6096" layer="25" rot="R90"/>
 <attribute name="VALUE" x="4.5505" y="3.72" size="0.6096" layer="27" rot="R90"/>
+<attribute name="OC_FARNELL" value="2331513" x="3.4075" y="4.355" size="1.778" layer="27" rot="R90" display="off"/>
+<attribute name="MF" value="TE CONNECTIVITY" x="3.4075" y="4.355" size="1.778" layer="27" rot="R90" display="off"/>
+<attribute name="MPN" value="CRG0402F33K" x="3.4075" y="4.355" size="1.778" layer="27" rot="R90" display="off"/>
 </element>
 <element name="R2" library="rcl" package="R0402" value="8k2" x="1.5875" y="3.81" smashed="yes">
 <attribute name="NAME" x="0.9525" y="5.3975" size="0.6096" layer="25"/>
 <attribute name="VALUE" x="0.9525" y="4.445" size="0.6096" layer="27"/>
+<attribute name="OC_FARNELL" value="2331571" x="1.5875" y="3.81" size="1.778" layer="27" display="off"/>
+<attribute name="MF" value="TE CONNECTIVITY" x="1.5875" y="3.81" size="1.778" layer="27" display="off"/>
+<attribute name="MPN" value="CRG0402F8K2" x="1.5875" y="3.81" size="1.778" layer="27" display="off"/>
 </element>
 <element name="C1" library="rcl" package="C0402" value="100nF" x="1.5875" y="4.9212" smashed="yes" rot="R180">
 <attribute name="NAME" x="2.2225" y="6.1912" size="0.6096" layer="25" rot="R180"/>
@@ -675,10 +687,16 @@ Please make sure your boards conform to these design rules.</description>
 <element name="R5" library="rcl" package="R0402" value="33k" x="3.4075" y="7.8975" smashed="yes" rot="R90">
 <attribute name="NAME" x="4.6775" y="7.2625" size="0.6096" layer="25" rot="R90"/>
 <attribute name="VALUE" x="2.1375" y="8.5325" size="0.6096" layer="27" rot="R270"/>
+<attribute name="OC_FARNELL" value="2331513" x="3.4075" y="7.8975" size="1.778" layer="27" rot="R90" display="off"/>
+<attribute name="MF" value="TE CONNECTIVITY" x="3.4075" y="7.8975" size="1.778" layer="27" rot="R90" display="off"/>
+<attribute name="MPN" value="CRG0402F33K" x="3.4075" y="7.8975" size="1.778" layer="27" rot="R90" display="off"/>
 </element>
 <element name="R6" library="rcl" package="R0402" value="8k2" x="1.5875" y="6.6675" smashed="yes">
 <attribute name="NAME" x="0.9525" y="5.3975" size="0.6096" layer="25"/>
 <attribute name="VALUE" x="0.9525" y="7.3025" size="0.6096" layer="27"/>
+<attribute name="OC_FARNELL" value="2331571" x="1.5875" y="6.6675" size="1.778" layer="27" display="off"/>
+<attribute name="MF" value="TE CONNECTIVITY" x="1.5875" y="6.6675" size="1.778" layer="27" display="off"/>
+<attribute name="MPN" value="CRG0402F8K2" x="1.5875" y="6.6675" size="1.778" layer="27" display="off"/>
 </element>
 <element name="C2" library="rcl" package="C0402" value="100nF" x="1.5875" y="7.7787" smashed="yes" rot="R180">
 <attribute name="NAME" x="2.2225" y="9.0487" size="0.6096" layer="25" rot="R180"/>
@@ -690,10 +708,16 @@ Please make sure your boards conform to these design rules.</description>
 <element name="R7" library="rcl" package="R0402" value="33k" x="3.4075" y="10.54" smashed="yes" rot="R90">
 <attribute name="NAME" x="2.7725" y="9.905" size="0.6096" layer="25" rot="R90"/>
 <attribute name="VALUE" x="4.5505" y="9.905" size="0.6096" layer="27" rot="R90"/>
+<attribute name="OC_FARNELL" value="2331513" x="3.4075" y="10.54" size="1.778" layer="27" rot="R90" display="off"/>
+<attribute name="MF" value="TE CONNECTIVITY" x="3.4075" y="10.54" size="1.778" layer="27" rot="R90" display="off"/>
+<attribute name="MPN" value="CRG0402F33K" x="3.4075" y="10.54" size="1.778" layer="27" rot="R90" display="off"/>
 </element>
 <element name="R8" library="rcl" package="R0402" value="8k2" x="1.5875" y="9.525" smashed="yes">
 <attribute name="NAME" x="0.9525" y="11.1125" size="0.6096" layer="25"/>
 <attribute name="VALUE" x="0.9525" y="10.16" size="0.6096" layer="27"/>
+<attribute name="OC_FARNELL" value="2331571" x="1.5875" y="9.525" size="1.778" layer="27" display="off"/>
+<attribute name="MF" value="TE CONNECTIVITY" x="1.5875" y="9.525" size="1.778" layer="27" display="off"/>
+<attribute name="MPN" value="CRG0402F8K2" x="1.5875" y="9.525" size="1.778" layer="27" display="off"/>
 </element>
 <element name="C4" library="rcl" package="C0402" value="100nF" x="1.5875" y="10.6362" smashed="yes" rot="R180">
 <attribute name="NAME" x="2.0637" y="9.2074" size="0.6096" layer="25" rot="R180"/>
@@ -705,10 +729,16 @@ Please make sure your boards conform to these design rules.</description>
 <element name="R9" library="rcl" package="R0402" value="33k" x="3.3925" y="13.0175" smashed="yes" rot="R270">
 <attribute name="NAME" x="4.0275" y="13.6525" size="0.6096" layer="25" rot="R270"/>
 <attribute name="VALUE" x="2.2495" y="14.0335" size="0.6096" layer="27" rot="R270"/>
+<attribute name="OC_FARNELL" value="2331513" x="3.3925" y="13.0175" size="1.778" layer="27" rot="R270" display="off"/>
+<attribute name="MF" value="TE CONNECTIVITY" x="3.3925" y="13.0175" size="1.778" layer="27" rot="R270" display="off"/>
+<attribute name="MPN" value="CRG0402F33K" x="3.3925" y="13.0175" size="1.778" layer="27" rot="R270" display="off"/>
 </element>
 <element name="R10" library="rcl" package="R0402" value="8k2" x="1.5875" y="13.4938" smashed="yes">
 <attribute name="NAME" x="0.9525" y="15.0813" size="0.6096" layer="25"/>
 <attribute name="VALUE" x="0.9525" y="14.1288" size="0.6096" layer="27"/>
+<attribute name="OC_FARNELL" value="2331571" x="1.5875" y="13.4938" size="1.778" layer="27" display="off"/>
+<attribute name="MF" value="TE CONNECTIVITY" x="1.5875" y="13.4938" size="1.778" layer="27" display="off"/>
+<attribute name="MPN" value="CRG0402F8K2" x="1.5875" y="13.4938" size="1.778" layer="27" display="off"/>
 </element>
 <element name="C6" library="rcl" package="C0402" value="100nF" x="1.5875" y="12.3825" smashed="yes" rot="R180">
 <attribute name="NAME" x="2.2225" y="13.6525" size="0.6096" layer="25" rot="R180"/>
@@ -720,10 +750,16 @@ Please make sure your boards conform to these design rules.</description>
 <element name="R11" library="rcl" package="R0402" value="33k" x="3.4075" y="15.825" smashed="yes" rot="R90">
 <attribute name="NAME" x="2.7725" y="15.19" size="0.6096" layer="25" rot="R90"/>
 <attribute name="VALUE" x="4.5505" y="15.19" size="0.6096" layer="27" rot="R90"/>
+<attribute name="OC_FARNELL" value="2331513" x="3.4075" y="15.825" size="1.778" layer="27" rot="R90" display="off"/>
+<attribute name="MF" value="TE CONNECTIVITY" x="3.4075" y="15.825" size="1.778" layer="27" rot="R90" display="off"/>
+<attribute name="MPN" value="CRG0402F33K" x="3.4075" y="15.825" size="1.778" layer="27" rot="R90" display="off"/>
 </element>
 <element name="R14" library="rcl" package="R0402" value="8k2" x="1.5875" y="16.3513" smashed="yes">
 <attribute name="NAME" x="0.9525" y="16.9863" size="0.6096" layer="25"/>
 <attribute name="VALUE" x="0.9525" y="15.0813" size="0.6096" layer="27"/>
+<attribute name="OC_FARNELL" value="2331571" x="1.5875" y="16.3513" size="1.778" layer="27" display="off"/>
+<attribute name="MF" value="TE CONNECTIVITY" x="1.5875" y="16.3513" size="1.778" layer="27" display="off"/>
+<attribute name="MPN" value="CRG0402F8K2" x="1.5875" y="16.3513" size="1.778" layer="27" display="off"/>
 </element>
 <element name="C8" library="rcl" package="C0402" value="100nF" x="1.5875" y="15.24" smashed="yes" rot="R180">
 <attribute name="NAME" x="2.2225" y="14.605" size="0.6096" layer="25" rot="R180"/>
@@ -745,49 +781,49 @@ Please make sure your boards conform to these design rules.</description>
 <attribute name="VALUE" x="19.304" y="12.3825" size="1.27" layer="27" rot="R180"/>
 <attribute name="OC_FARNELL" value="1081223" x="17.399" y="9.2075" size="1.778" layer="27" rot="R180" display="off"/>
 <attribute name="MF" value="NXP" x="17.399" y="9.2075" size="1.778" layer="27" rot="R180" display="off"/>
-<attribute name="MPN" value="BC817" x="17.399" y="9.2075" size="1.778" layer="27" rot="R180" display="off"/>
+<attribute name="MPN" value="BC817,215" x="17.399" y="9.2075" size="1.778" layer="27" rot="R180" display="off"/>
 </element>
 <element name="R4" library="rcl" package="R0402" value="2k2" x="19.7245" y="9.218" smashed="yes" rot="R90">
 <attribute name="NAME" x="20.9945" y="8.9005" size="0.6096" layer="25" rot="R90"/>
 <attribute name="VALUE" x="20.042" y="10.488" size="0.6096" layer="27" rot="R90"/>
-<attribute name="OC_FARNELL" value="1469765" x="19.7245" y="9.218" size="1.778" layer="27" rot="R90" display="off"/>
-<attribute name="MF" value="VISHAY DRALORIC" x="19.7245" y="9.218" size="1.778" layer="27" rot="R90" display="off"/>
-<attribute name="MPN" value="CRCW06032K20FKEA" x="19.7245" y="9.218" size="1.778" layer="27" rot="R90" display="off"/>
+<attribute name="OC_FARNELL" value="2059231" x="19.7245" y="9.218" size="1.778" layer="27" rot="R90" display="off"/>
+<attribute name="MF" value="PANASONIC ELECTRONIC COMPONENTS" x="19.7245" y="9.218" size="1.778" layer="27" rot="R90" display="off"/>
+<attribute name="MPN" value="ERJ2GEJ222X" x="19.7245" y="9.218" size="1.778" layer="27" rot="R90" display="off"/>
 </element>
 <element name="R15" library="rcl" package="R0402" value="470" x="19.05" y="3.81" smashed="yes" rot="R180">
 <attribute name="NAME" x="19.685" y="3.175" size="0.6096" layer="25" rot="R180"/>
 <attribute name="VALUE" x="19.685" y="5.3975" size="0.6096" layer="27" rot="R180"/>
-<attribute name="OC_FARNELL" value="2078905" x="19.05" y="3.81" size="1.778" layer="27" rot="R180" display="off"/>
-<attribute name="MF" value="WELWYN" x="19.05" y="3.81" size="1.778" layer="27" rot="R180" display="off"/>
-<attribute name="MPN" value="ASC0603-470RFT5" x="19.05" y="3.81" size="1.778" layer="27" rot="R180" display="off"/>
+<attribute name="OC_FARNELL" value="2059203" x="19.05" y="3.81" size="1.778" layer="27" rot="R180" display="off"/>
+<attribute name="MF" value="PANASONIC ELECTRONIC COMPONENTS" x="19.05" y="3.81" size="1.778" layer="27" rot="R180" display="off"/>
+<attribute name="MPN" value="ERJ2GEJ470X" x="19.05" y="3.81" size="1.778" layer="27" rot="R180" display="off"/>
 </element>
 <element name="R16" library="rcl" package="R0402" value="47k" x="19.05" y="6.35" smashed="yes">
 <attribute name="NAME" x="18.415" y="5.08" size="0.6096" layer="25"/>
 <attribute name="VALUE" x="20.32" y="6.35" size="0.6096" layer="27"/>
-<attribute name="OC_FARNELL" value="1469811" x="19.05" y="6.35" size="1.778" layer="27" display="off"/>
-<attribute name="MF" value="VISHAY DRALORIC" x="19.05" y="6.35" size="1.778" layer="27" display="off"/>
-<attribute name="MPN" value="CRCW060347K0FKEA" x="19.05" y="6.35" size="1.778" layer="27" display="off"/>
+<attribute name="OC_FARNELL" value="2059246" x="19.05" y="6.35" size="1.778" layer="27" display="off"/>
+<attribute name="MF" value="PANASONIC ELECTRONIC COMPONENTS" x="19.05" y="6.35" size="1.778" layer="27" display="off"/>
+<attribute name="MPN" value="ERJ2GEJ473X" x="19.05" y="6.35" size="1.778" layer="27" display="off"/>
 </element>
 <element name="R17" library="rcl" package="R0402" value="470" x="11.6" y="10" smashed="yes" rot="R270">
 <attribute name="NAME" x="12.235" y="10.635" size="0.6096" layer="25" rot="R270"/>
 <attribute name="VALUE" x="10.33" y="10.635" size="0.6096" layer="27" rot="R270"/>
-<attribute name="OC_FARNELL" value="2078905" x="11.6" y="10" size="1.778" layer="27" rot="R270" display="off"/>
-<attribute name="MF" value="WELWYN" x="11.6" y="10" size="1.778" layer="27" rot="R270" display="off"/>
-<attribute name="MPN" value="ASC0603-470RFT5" x="11.6" y="10" size="1.778" layer="27" rot="R270" display="off"/>
+<attribute name="OC_FARNELL" value="2059203" x="11.6" y="10" size="1.778" layer="27" rot="R270" display="off"/>
+<attribute name="MF" value="PANASONIC ELECTRONIC COMPONENTS" x="11.6" y="10" size="1.778" layer="27" rot="R270" display="off"/>
+<attribute name="MPN" value="ERJ2GEJ470X" x="11.6" y="10" size="1.778" layer="27" rot="R270" display="off"/>
 </element>
 <element name="R18" library="rcl" package="R0402" value="470" x="13.3" y="10" smashed="yes" rot="R270">
 <attribute name="NAME" x="13.935" y="10.635" size="0.6096" layer="25" rot="R270"/>
 <attribute name="VALUE" x="12.9825" y="12.8575" size="0.6096" layer="27" rot="R270"/>
-<attribute name="OC_FARNELL" value="2078905" x="13.3" y="10" size="1.778" layer="27" rot="R270" display="off"/>
-<attribute name="MF" value="WELWYN" x="13.3" y="10" size="1.778" layer="27" rot="R270" display="off"/>
-<attribute name="MPN" value="ASC0603-470RFT5" x="13.3" y="10" size="1.778" layer="27" rot="R270" display="off"/>
+<attribute name="OC_FARNELL" value="2059203" x="13.3" y="10" size="1.778" layer="27" rot="R270" display="off"/>
+<attribute name="MF" value="PANASONIC ELECTRONIC COMPONENTS" x="13.3" y="10" size="1.778" layer="27" rot="R270" display="off"/>
+<attribute name="MPN" value="ERJ2GEJ470X" x="13.3" y="10" size="1.778" layer="27" rot="R270" display="off"/>
 </element>
 <element name="R19" library="rcl" package="R0402" value="1k" x="14.905" y="3.71" smashed="yes" rot="R180">
 <attribute name="NAME" x="15.54" y="4.98" size="0.6096" layer="25" rot="R180"/>
 <attribute name="VALUE" x="15.2225" y="3.075" size="0.6096" layer="27" rot="R180"/>
-<attribute name="OC_FARNELL" value="" x="14.905" y="3.71" size="1.778" layer="27" rot="R180" display="off"/>
-<attribute name="MF" value="" x="14.905" y="3.71" size="1.778" layer="27" rot="R180" display="off"/>
-<attribute name="MPN" value="" x="14.905" y="3.71" size="1.778" layer="27" rot="R180" display="off"/>
+<attribute name="OC_FARNELL" value="2059225" x="14.905" y="3.71" size="1.778" layer="27" rot="R180" display="off"/>
+<attribute name="MF" value="PANASONIC ELECTRONIC COMPONENTS" x="14.905" y="3.71" size="1.778" layer="27" rot="R180" display="off"/>
+<attribute name="MPN" value="ERJ2GEJ102X" x="14.905" y="3.71" size="1.778" layer="27" rot="R180" display="off"/>
 </element>
 <element name="OK3" library="optocoupler" package="MINI-FLAT-4" value="TLP283" x="16.6687" y="15.875" smashed="yes">
 <attribute name="NAME" x="16.8275" y="16.1925" size="0.6096" layer="25"/>
@@ -822,17 +858,24 @@ Please make sure your boards conform to these design rules.</description>
 <element name="IC2" library="linear" package="SOT89" value="78L05F" x="7.7903" y="14.7026" smashed="yes" rot="R270">
 <attribute name="NAME" x="8.1078" y="16.1314" size="0.6096" layer="25" rot="R270"/>
 <attribute name="VALUE" x="6.9379" y="15.9965" size="0.6096" layer="27" rot="R270"/>
+<attribute name="OC_FARNELL" value="1467762" x="7.7903" y="14.7026" size="1.778" layer="27" rot="R270" display="off"/>
+<attribute name="MF" value="STMICROELECTRONICS" x="7.7903" y="14.7026" size="1.778" layer="27" rot="R270" display="off"/>
+<attribute name="MPN" value="L78L05ABUTR" x="7.7903" y="14.7026" size="1.778" layer="27" rot="R270" display="off"/>
 </element>
 <element name="R20" library="rcl" package="R0402" value="47k" x="19.05" y="5.08">
-<attribute name="OC_FARNELL" value="1469811" x="19.05" y="5.08" size="1.778" layer="27" display="off"/>
-<attribute name="MF" value="VISHAY DRALORIC" x="19.05" y="5.08" size="1.778" layer="27" display="off"/>
-<attribute name="MPN" value="CRCW060347K0FKEA" x="19.05" y="5.08" size="1.778" layer="27" display="off"/>
+<attribute name="OC_FARNELL" value="2059246" x="19.05" y="5.08" size="1.778" layer="27" display="off"/>
+<attribute name="MF" value="PANASONIC ELECTRONIC COMPONENTS" x="19.05" y="5.08" size="1.778" layer="27" display="off"/>
+<attribute name="MPN" value="ERJ2GEJ473X" x="19.05" y="5.08" size="1.778" layer="27" display="off"/>
 </element>
-<element name="LED1" library="led" package="CHIPLED_0603" value="" x="16.71" y="4.445" rot="R180"/>
+<element name="LED1" library="led" package="CHIPLED_0603" value="" x="16.71" y="4.445" rot="R180">
+<attribute name="OC_FARNELL" value="unknown" x="16.71" y="4.445" size="1.778" layer="27" rot="R180" display="off"/>
+<attribute name="MF" value="" x="16.71" y="4.445" size="1.778" layer="27" rot="R180" display="off"/>
+<attribute name="MPN" value="" x="16.71" y="4.445" size="1.778" layer="27" rot="R180" display="off"/>
+</element>
 <element name="R21" library="rcl" package="R0402" value="1k" x="14.905" y="5.08" rot="R180">
-<attribute name="OC_FARNELL" value="" x="14.905" y="5.08" size="1.778" layer="27" rot="R180" display="off"/>
-<attribute name="MF" value="" x="14.905" y="5.08" size="1.778" layer="27" rot="R180" display="off"/>
-<attribute name="MPN" value="" x="14.905" y="5.08" size="1.778" layer="27" rot="R180" display="off"/>
+<attribute name="OC_FARNELL" value="2059225" x="14.905" y="5.08" size="1.778" layer="27" rot="R180" display="off"/>
+<attribute name="MF" value="PANASONIC ELECTRONIC COMPONENTS" x="14.905" y="5.08" size="1.778" layer="27" rot="R180" display="off"/>
+<attribute name="MPN" value="ERJ2GEJ102X" x="14.905" y="5.08" size="1.778" layer="27" rot="R180" display="off"/>
 </element>
 <element name="SV2" library="Fab_con" package="MA07-1_SMD" value="" x="1.5875" y="8.5725" rot="MR90">
 <attribute name="MF" value="" x="1.5875" y="8.5725" size="1.778" layer="28" rot="MR90" display="off"/>
@@ -845,12 +888,20 @@ Please make sure your boards conform to these design rules.</description>
 <attribute name="MF" value="" x="7.915" y="12.1275" size="1.778" layer="28" rot="MR270" display="off"/>
 <attribute name="MPN" value="" x="7.915" y="12.1275" size="1.778" layer="28" rot="MR270" display="off"/>
 </element>
-<element name="C7" library="rcl" package="C0805" value="" x="8.06" y="11.4387"/>
-<element name="C5" library="rcl" package="C0805" value="" x="11.7475" y="15.24" rot="R270"/>
+<element name="C7" library="rcl" package="C0805" value="2u2" x="8.06" y="11.4387">
+<attribute name="OC_FARNELL" value="2320829" x="8.06" y="11.4387" size="1.778" layer="27" display="off"/>
+<attribute name="MF" value="MULTICOMP" x="8.06" y="11.4387" size="1.778" layer="27" display="off"/>
+<attribute name="MPN" value="MC0805B225K250CT" x="8.06" y="11.4387" size="1.778" layer="27" display="off"/>
+</element>
 <element name="C10" library="rcl" package="C0402" value="100nF" x="6.99" y="9.375">
 <attribute name="OC_FARNELL" value="1867948" x="6.99" y="9.375" size="1.778" layer="27" display="off"/>
 <attribute name="MF" value="AVX" x="6.99" y="9.375" size="1.778" layer="27" display="off"/>
 <attribute name="MPN" value="04023C104KAT2A" x="6.99" y="9.375" size="1.778" layer="27" display="off"/>
+</element>
+<element name="C5" library="rcl" package="C0805" value="2u2" x="11.8" y="15.2" rot="R270">
+<attribute name="OC_FARNELL" value="2320829" x="11.8" y="15.2" size="1.778" layer="27" rot="R270" display="off"/>
+<attribute name="MF" value="MULTICOMP" x="11.8" y="15.2" size="1.778" layer="27" rot="R270" display="off"/>
+<attribute name="MPN" value="MC0805B225K250CT" x="11.8" y="15.2" size="1.778" layer="27" rot="R270" display="off"/>
 </element>
 </elements>
 <signals>
@@ -881,7 +932,6 @@ Please make sure your boards conform to these design rules.</description>
 <contactref element="LED1" pad="C"/>
 <contactref element="SV2" pad="P$1"/>
 <contactref element="IN1" pad="0V"/>
-<contactref element="C5" pad="2"/>
 <contactref element="C7" pad="2"/>
 <contactref element="C10" pad="2"/>
 <polygon width="0.1524" layer="16">
@@ -953,13 +1003,11 @@ Please make sure your boards conform to these design rules.</description>
 <wire x1="11.811" y1="14.2494" x2="13.4112" y2="14.2494" width="0.1524" layer="1"/>
 <wire x1="13.4112" y1="14.2494" x2="13.9446" y2="14.2494" width="0.1524" layer="1"/>
 <wire x1="13.4874" y1="12.4206" x2="13.4287" y2="12.3825" width="0.1524" layer="1"/>
-<wire x1="11.811" y1="14.2494" x2="11.7475" y2="14.29" width="0.1524" layer="1"/>
 <wire x1="8.6868" y1="14.7066" x2="6.096" y2="14.7066" width="0.1524" layer="1"/>
 <wire x1="6.096" y1="14.7066" x2="6.0633" y2="14.7026" width="0.1524" layer="1"/>
 <wire x1="8.6868" y1="14.7066" x2="8.7303" y2="14.7026" width="0.1524" layer="1"/>
 <wire x1="9.0678" y1="14.3256" x2="11.7348" y2="14.3256" width="0.1524" layer="1"/>
 <wire x1="8.763" y1="14.6304" x2="9.0678" y2="14.3256" width="0.1524" layer="1"/>
-<wire x1="11.7348" y1="14.3256" x2="11.7475" y2="14.29" width="0.1524" layer="1"/>
 <wire x1="8.763" y1="14.6304" x2="8.7303" y2="14.7026" width="0.1524" layer="1"/>
 <wire x1="7.9248" y1="1.6002" x2="7.9248" y2="1.905" width="0.1524" layer="1"/>
 <wire x1="8.8392" y1="0.6858" x2="8.4201" y2="1.1049" width="0.1524" layer="1"/>
@@ -1010,6 +1058,7 @@ Please make sure your boards conform to these design rules.</description>
 <via x="15.5448" y="2.7432" extent="1-16" drill="0.3302"/>
 <via x="13.4112" y="14.4018" extent="1-16" drill="0.3302"/>
 <via x="7.3152" y="0.9906" extent="1-16" drill="0.3302"/>
+<contactref element="C5" pad="2"/>
 </signal>
 <signal name="VCC">
 <contactref element="R3" pad="2"/>
@@ -1023,9 +1072,7 @@ Please make sure your boards conform to these design rules.</description>
 <contactref element="C11" pad="1"/>
 <contactref element="IC2" pad="1"/>
 <contactref element="IN1" pad="5V"/>
-<contactref element="C5" pad="1"/>
 <wire x1="5.8674" y1="16.2306" x2="11.7348" y2="16.2306" width="0.1524" layer="1"/>
-<wire x1="11.7348" y1="16.2306" x2="11.7475" y2="16.19" width="0.1524" layer="1"/>
 <wire x1="5.8674" y1="16.2306" x2="5.8093" y2="16.2016" width="0.1524" layer="1"/>
 <wire x1="5.6388" y1="16.1544" x2="5.7912" y2="16.1544" width="0.1524" layer="1"/>
 <wire x1="4.4196" y1="14.9352" x2="5.6388" y2="16.1544" width="0.1524" layer="1"/>
@@ -1089,6 +1136,8 @@ Please make sure your boards conform to these design rules.</description>
 <wire x1="14.7066" y1="9.9822" x2="14.658" y2="9.9275" width="0.1524" layer="16"/>
 <via x="4.4196" y="14.9352" extent="1-16" drill="0.3302"/>
 <via x="14.6304" y="8.4582" extent="1-16" drill="0.3302"/>
+<contactref element="C5" pad="1"/>
+<wire x1="11.7348" y1="16.2306" x2="11.8" y2="16.15" width="0" layer="19" extent="1-1"/>
 </signal>
 <signal name="MISO">
 <contactref element="IC1" pad="16"/>
