@@ -7,6 +7,9 @@ LiPoHoTT
 Project home page:
 https://www.huslik-elektronik.de/cms/embedded-hardware/31-lipohott
 
+order PCBs here:
+https://oshpark.com/shared_projects/f62OUvRq
+
 Features:
 Optocoupler for communication interface
 2-6 Cells
