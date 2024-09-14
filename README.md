@@ -4,9 +4,6 @@ LiPoHoTT
 2S to 6S LiPo monitor for HoTT telemetry.
 (c) 2012-2014 Fabian Huslik
 
-Project home page:
-https://www.huslik-elektronik.de/cms/embedded-hardware/31-lipohott
-
 order PCBs here:
 https://oshpark.com/shared_projects/f62OUvRq
 
